@@ -79,7 +79,7 @@ const Project = ({ data }) => {
 
         <div className={`${style.container} ${style.photosGallery}`}>
           {images.map((image, i) => {
-
+            
             if (counter === 0) {
 
               if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
@@ -102,7 +102,7 @@ const Project = ({ data }) => {
                 !images[i + 1]) {
                   width = `100%`
                   counter = 0
-                } 
+              } 
 
             } else if (counter === 1) {
 
@@ -146,42 +146,44 @@ const Project = ({ data }) => {
                 !images[i + 1]) {
                   width = `calc(50% - 10px)`
                   counter = 0
-                } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height &&
-                  image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
-                  !images[i + 1]) {
-                    width = `calc(66.666667% - 10px)`
-                    counter = 0
-                  }
-          }
+              } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height &&
+                image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
+                !images[i + 1]) {
+                  width = `calc(66.666667% - 10px)`
+                  counter = 0
+              }
+            }
 
             return (
               <>
-              {deviceWidth > 1024 ? 
-              <div className={style.photo} style={{width: width}} onClick={() => showFullImage(image, i)}>
-                <GatsbyImage
-                  key={image.id}
-                  alt={projectData?.frontmatter?.title}
-                  image={getImage(image)}  
-                  style={{width: "100%", height: "100%"}}               
-                />
-              </div> :
-              <div className={style.photo} style={{width: width}}>
-              <GatsbyImage
-                key={image.id}
-                alt={projectData?.frontmatter?.title}
-                image={getImage(image)}  
-                style={{width: "100%", height: "100%"}}               
-              />
-            </div>}
+                {deviceWidth > 1024 ? 
+                <div className={style.photo} style={{width: width}} onClick={() => showFullImage(image, i)}>
+                  <GatsbyImage
+                    key={image.id}
+                    alt={projectData?.frontmatter?.title}
+                    image={getImage(image)}  
+                    style={{width: "100%", height: "100%"}}               
+                  />
+                </div> :
+                <div className={style.photo} style={{width: width}}>
+                  <GatsbyImage
+                    key={image.id}
+                    alt={projectData?.frontmatter?.title}
+                    image={getImage(image)}  
+                    style={{width: "100%", height: "100%"}}               
+                  />
+                </div>}
               </>
             )
-          })}
+          })
+          
+        }
         </div> :
         <Video videoSrcURL={data.mdx.frontmatter.link} />
             
         } 
                
-        <article  className={style.projectDescription}>
+        <article className={style.projectDescription}>
           <MDXRenderer>{projectData?.body}</MDXRenderer>
         </article>
         
