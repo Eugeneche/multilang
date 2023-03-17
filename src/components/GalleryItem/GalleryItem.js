@@ -18,7 +18,7 @@ const GalleryItem = (props) => {
 
         if (event?.code === "ArrowLeft") {
             console.log(`movePhotoRight ${event.code}`)
-            setIndex(index + 1) 
+            setIndex(index - 1) 
         }
 
     }, [index])
@@ -27,7 +27,7 @@ const GalleryItem = (props) => {
 
         if (event?.code === "ArrowRight") {
             console.log(`movePhotoLeft ${event.code}`)
-            setIndex(index - 1) 
+            setIndex(index + 1) 
         }
 
     }, [index])
