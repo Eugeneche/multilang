@@ -1,5 +1,4 @@
 import * as React from "react"
-//import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 
 import Seo from "../components/seo"
@@ -14,13 +13,7 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("seo_title_prices")} description={t("seo_description_prices")} />
-{/*       <StaticImage 
-        src="../images/header_pr.jpg" 
-        alt="slider"
-        layout="fullWidth"
-        placeholder="blurred"
-    /> */}
-      {/* <div className={style.gap}></div> */}
+
       <div className={style.container}>
         <h1 className={style.title}>{t("bundles")}</h1>
 
@@ -66,8 +59,6 @@ const Contacts = () => {
             <div className={style.price}>{t("bundle4price")}</div>
           </div>
         </div>
-
-        {/* <div className={style.gap}></div> */}
 
       </div>     
     </Layout>

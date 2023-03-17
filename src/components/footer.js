@@ -48,13 +48,13 @@ function Footer() {
         
         <div className={style.socials}>
           <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
-            <img className={style.fb} src={fb}></img>
+            <img src={fb} alt="facebook logo"></img>
           </a>
           <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
-            <img className={style.yt} src={yt}></img>
+            <img src={yt} alt="youtube logo"></img>
           </a>
           <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
-            <img className={style.insta} src={insta}></img>
+            <img src={insta} alt="instagram logo"></img>
           </a>
         </div>
         <p><Trans i18nKey="footer">{{ year }}</Trans></p>

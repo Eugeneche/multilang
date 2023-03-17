@@ -164,7 +164,7 @@ const Menu = () => {
                   style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
                   alt="flag"
                 />
-                }
+                } 
               })}
             </li>
             <li>
@@ -238,17 +238,17 @@ const Menu = () => {
             <ul className={style.socials}>
               <li>             
                 <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
-                  <img className={style.fb} src={fb} onClick={() => setShow(false)}></img>
+                  <img className={style.fb} src={fb} alt="facebook logo" onClick={() => setShow(false)}></img>
                 </a>
               </li>
               <li>             
                 <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
-                  <img className={style.yt} src={yt} onClick={() => setShow(false)}></img>
+                  <img className={style.yt} src={yt} alt="youtube logo" onClick={() => setShow(false)}></img>
                 </a>
               </li>
               <li>             
                 <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
-                  <img className={style.insta} src={insta} onClick={() => setShow(false)}></img>
+                  <img className={style.insta} src={insta} alt="instagram logo" onClick={() => setShow(false)}></img>
                 </a>
               </li>
             </ul>                                         

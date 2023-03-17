@@ -157,7 +157,7 @@ const Project = ({ data }) => {
             return (
               <>
                 {deviceWidth > 1024 ? 
-                <div className={style.photo} style={{width: width}} onClick={() => showFullImage(image, i)}>
+                <div className={style.photo} style={{width: width}} aria-hidden onClick={() => showFullImage(image, i)}>
                   <GatsbyImage
                     key={image.id}
                     alt={projectData?.frontmatter?.title}
