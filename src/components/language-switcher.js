@@ -23,7 +23,7 @@ function LanguageSwitcher() {
     <div>    
       <select value={locale}
         onChange={switchLanguage} 
-        style={{height: "25px",
+        style={{/* height: "25px", */
         fontFamily: `'Exo 2', sans-serif`,
         border: "1px solid #e1e1e1",
         borderRadius: "4px"}}>

@@ -12,10 +12,9 @@ const Contacts = () => {
   
   const { t } = useTranslation()
   const { locale } = useLocalization()
-  console.log(locale)
 
   const pageToReturn = `https://stirring-mermaid-d8fa23.netlify.app/${locale}/contacts`
-  console.log(pageToReturn)
+  
   return (
     <Layout>
       <Seo title={t("seo_title_contacts")} description={t("seo_description_contacts")} />

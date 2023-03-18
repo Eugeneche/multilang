@@ -59,7 +59,7 @@ function Footer() {
         </div>
         <p><Trans i18nKey="footer">{{ year }}</Trans></p>
         <p style={{fontSize: "12px", color: "#8f8f8f"}}>Developed by
-          <a href="https://websolutionsforyou.com/" target="_blank" rel="noopener noreferrer"> websolutionsforyou.com</a></p>
+          <a href="https://websolutionsforyou.com/" target="_blank"> websolutionsforyou.com</a></p>
         <LocalizedLink style={isVisible ? styleVisible : styleInisible} className={style.buttonTop} to={locale}><img src={top} alt="to top button"></img></LocalizedLink>
       </div>
     </footer>

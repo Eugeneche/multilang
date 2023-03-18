@@ -212,7 +212,13 @@ const Menu = () => {
               <li>
                 <LocalizedLink to={`/`} onClick={() => setShow(false)}>{t("home")}</LocalizedLink>
               </li>
-              <li className={style.worksMobile}>
+              <li>
+                <LocalizedLink to={`/wedding-photos`}>{t("photo")}</LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
+              </li>
+              {/* <li className={style.worksMobile}>
                 {t("works")}
                 <ul className={style.worksList}>
                   {categoriesRightOrder.map(category => {
@@ -225,7 +231,7 @@ const Menu = () => {
                     })
                   })}     
                 </ul>
-              </li>
+              </li> */}
               <li>
                 <LocalizedLink to="/prices" onClick={() => setShow(false)}>{t("prices")}</LocalizedLink>
               </li>
