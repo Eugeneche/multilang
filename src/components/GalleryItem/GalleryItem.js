@@ -110,13 +110,13 @@ const GalleryItem = (props) => {
                 }}>
                 <GatsbyImage
                     className={style.photoItemFull}
-                    alt="ff"
+                    alt={props.image.relativeDirectory.replace(/["/"]/g, " ").replace(/-/g, " ")}
                     image={getImage(currentImage)}
                     style={{overflow: "visible", height: "96vh", width: "fit-content"}}
                 />
             </div>
             <button className={style.arrowRight}
-                 onClick={(e) => {
+                onClick={(e) => {
                     e.stopPropagation()
                     setIndex(index + 1)}}>
                 <img src={rightArrow} alt="right arrow icon"></img>
