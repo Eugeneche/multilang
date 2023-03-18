@@ -17,7 +17,6 @@ const GalleryItem = (props) => {
     const movePhotoRight = useCallback((event) => {
 
         if (event?.code === "ArrowLeft") {
-            console.log(`movePhotoRight ${event.code}`)
             setIndex(index - 1) 
         }
 
@@ -26,7 +25,6 @@ const GalleryItem = (props) => {
     const movePhotoLeft = useCallback((event) => {
 
         if (event?.code === "ArrowRight") {
-            console.log(`movePhotoLeft ${event.code}`)
             setIndex(index + 1) 
         }
 
@@ -35,7 +33,6 @@ const GalleryItem = (props) => {
     const closeByEscape = (event) => {
         
         if (event?.code === 'Escape') {
-            console.log(`closeByEscape ${event.key}`)
             props.toggleIsFullImage(false)
         }       
     }
