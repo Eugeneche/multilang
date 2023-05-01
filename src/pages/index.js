@@ -31,18 +31,21 @@ const IndexPage = ({ data }) => {
               return <section className={style.categoryItem} key={category.id}>
               <div className={style.container}>
                 <h2>{category.frontmatter.title}</h2>
-                {data.allFile.nodes.map(project => {
 
-                  if(project.childMdx.frontmatter.category === category.frontmatter.slug) {
+                <div className={style.bestWorksGroup}>
+                  {data.allFile.nodes.map(project => {
 
-                    return (
-                      <div className={style.bestWorks} key={project.childMdx.id}>
-                        <Teaser project={project} />
-                      </div>
-                    )
-                  }
-                  
-                })}
+                    if(project.childMdx.frontmatter.category === category.frontmatter.slug) {
+
+                      return (
+                        <div className={style.bestWorks} key={project.childMdx.id}>
+                          <Teaser project={project} />
+                        </div>
+                      )
+                    }
+                    
+                  })}
+                </div>
               </div>
             </section>
             } else return false

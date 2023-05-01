@@ -62,8 +62,9 @@ const Contacts = () => {
         <div className={style.contacts}>
           <StaticImage 
             className={style.aboutPhoto}
-            src="../images/me.jpg" 
+            src="../images/photographer.jpg" 
             alt="my foto"
+            width={300}
           />
           <form action="https://submit-form.com/m6LCQqtH">
             <input

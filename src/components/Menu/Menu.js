@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as style from "./_Menu.module.scss"
-import logo from "../../images/logo.png"
+import logo from "../../images/logo_yd.png"
 import yt from "../../images/yt_monochrome.svg"
 import fb from "../../images/fb_monochrome.svg"
 import insta from "../../images/insta_monochrome.svg"
@@ -127,6 +127,9 @@ const Menu = () => {
           <li>
             <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
           </li>
+          <li>
+            <LocalizedLink to={`/wedding-drone`}>{t("drone")}</LocalizedLink>
+          </li>
           {/* <li className={style.works}>
             {t("works")}&nbsp;&nbsp;
               <span>&#10095;
@@ -217,6 +220,9 @@ const Menu = () => {
               </li>
               <li>
                 <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to={`/wedding-drone`}>{t("drone")}</LocalizedLink>
               </li>
               {/* <li className={style.worksMobile}>
                 {t("works")}
