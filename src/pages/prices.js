@@ -24,6 +24,8 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle11")}</li>
               <li className={style.bundleItem}>{t("bundle12")}</li>
               <li className={style.bundleItem}>{t("bundle13")}</li>
+              <li className={style.bundleItem}>{t("bundle14")}</li>
+              <li className={style.bundleItem}>{t("bundle15")}</li>
             </ul>
             <div className={style.price}>{t("bundle1price")}</div>
           </div>
@@ -33,6 +35,9 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle21")}</li>
               <li className={style.bundleItem}>{t("bundle22")}</li>
               <li className={style.bundleItem}>{t("bundle23")}</li>
+              <li className={style.bundleItem}>{t("bundle24")}</li>
+              <li className={style.bundleItem}>{t("bundle25")}</li>
+              <li className={style.bundleItem}>{t("bundle26")}</li>
             </ul>
             <div className={style.price}>{t("bundle2price")}</div>
           </div>
@@ -44,7 +49,8 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle33")}</li>
               <li className={style.bundleItem}>{t("bundle34")}</li>
               <li className={style.bundleItem}>{t("bundle35")}</li>
-              <li className={style.bundleItem}>{t("bundle35")}</li>
+              <li className={style.bundleItem}>{t("bundle36")}</li>
+              <li className={style.bundleItem}>{t("bundle37")}</li>
             </ul>
             <div className={style.price}>{t("bundle3price")}</div>
           </div>
@@ -55,6 +61,10 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle42")}</li>
               <li className={style.bundleItem}>{t("bundle43")}</li>
               <li className={style.bundleItem}>{t("bundle44")}</li>
+              <li className={style.bundleItem}>{t("bundle45")}</li>
+              <li className={style.bundleItem}>{t("bundle46")}</li>
+              <li className={style.bundleItem}>{t("bundle47")}</li>
+              <li className={style.bundleItem}>{t("bundle48")}</li>
             </ul>
             <div className={style.price}>{t("bundle4price")}</div>
           </div>
