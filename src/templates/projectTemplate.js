@@ -15,9 +15,9 @@ const Project = ({ data }) => {
 
   const { t } = useTranslation()
   const projectData = data.mdx
-  const images = data.allFile.nodes
+  const images = data.allFile.nodes.sort((a, b) => a.name - b.name)
   let counter = 0, width = ""
-
+console.log(images)
   const [isFull, setIsfull] = useState(false)
   const [isShow, setIsShow] = useState(false)
   const [currentImage, setCurrentImage] = useState({})
@@ -223,6 +223,7 @@ query ProjectBySlug($slug: String, $locale: String, $fullSlug: String) {
     nodes {
       relativeDirectory
       id
+      name
       childImageSharp {
         gatsbyImageData(
           placeholder: BLURRED
