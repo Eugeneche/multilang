@@ -6,7 +6,7 @@ import rightArrow from "../../images/arrow-right-solid.svg"
 
 
 const GalleryItem = (props) => {
-
+console.log(props)
     const [currentImage, setCurrentImage] = useState(props.image)
     const [index, setIndex] = useState(props.index)
 

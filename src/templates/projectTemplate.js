@@ -15,12 +15,17 @@ const Project = ({ data }) => {
 
   const { t } = useTranslation()
   const projectData = data.mdx
-  const images = data.allFile.nodes.sort((a, b) => a.name - b.name)
+  const images = data.allFile.nodes.filter(node => node.name !== 'cover').sort((a, b) => a.name - b.name)
+  const cover = data.allFile.nodes.filter(node => node.name === 'cover')
+  images.unshift(cover[0])
+  //const images = data.allFile.nodes.sort((a, b) => a.name - b.name)
   let counter = 0, width = ""
 console.log(images)
+console.log(cover)
   const [isFull, setIsfull] = useState(false)
   const [isShow, setIsShow] = useState(false)
   const [currentImage, setCurrentImage] = useState({})
+  //const [currentKey, setCurrentKey] = useState('')
   const [index, setIndex] = useState(0)
   const [deviceWidth, setDeviceWidth] = useState('')
 
@@ -35,7 +40,9 @@ console.log(images)
   const showFullImage = (image, index) => {
     setIsfull(true)
     setCurrentImage(image)
+    //setCurrentKey(image.id)
     setIndex(index)
+    console.log(image)
   }
 
   const toggleIsFullImage = (bool) => {
@@ -157,17 +164,15 @@ console.log(images)
             return (
               <>
                 {deviceWidth > 1024 ? 
-                <div className={style.photo} style={{width: width}} aria-hidden onClick={() => showFullImage(image, i)}>
+                <div key={currentImage.id} className={style.photo} style={{width: width}} aria-hidden onClick={() => showFullImage(image, i)}>
                   <GatsbyImage
-                    key={image.id}
                     alt={projectData?.frontmatter?.title}
                     image={getImage(image)}  
                     style={{width: "100%", height: "100%"}}               
                   />
                 </div> :
-                <div className={style.photo} style={{width: width}}>
+                <div key={currentImage.id} className={style.photo} style={{width: width}}>
                   <GatsbyImage
-                    key={image.id}
                     alt={projectData?.frontmatter?.title}
                     image={getImage(image)}  
                     style={{width: "100%", height: "100%"}}               
