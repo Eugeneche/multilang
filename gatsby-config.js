@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Yaroslav Vysotskyi`,
-    description: `Yaroslav Vysotskyi - fotograf a kameraman Teplice, Ústí nad Labem, Ústecký kraj`,
+    title: `Phographer and videographer Yudai Delgado`,
+    description: `Yudai Delgado - professional weddings photo and video Teplice, Ústí nad Labem, Ústecký kraj`,
     author: `@evg_c`,
     siteUrl: `https://photo-videographer.netlify.app`,
   },

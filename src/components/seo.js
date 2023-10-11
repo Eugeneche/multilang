@@ -89,7 +89,7 @@ function Seo({ description, lang, meta, title, ogImageDefault, ogImageAlt }) {
           content: imagePath,
         },
         { property: `twitter:image:alt`, 
-          content: ogImageAlt || "Yaroslav Vysotskyi website", 
+          content: ogImageAlt || "Yudai Delgado's website", 
         }, 
       ].concat(meta)}
     />
